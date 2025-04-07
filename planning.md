@@ -1,48 +1,114 @@
-# AI Project Manager and Developer Coach - Project Planning
+# AI Project Manager and Developer Coach
 
 ## Project Overview
-This project implements an intelligent agent that acts as a project manager and senior developer to guide the development of machine learning applications. It leverages an extended memory system, vector database for documentation, and an extensible tool system to provide code review, debugging assistance, and project structure management.
-
-> **Important**: Always refer to `project_map.md` for the most up-to-date file structure and component descriptions before creating new files or modifying existing ones.
+The AI Project Manager and Developer Coach is an intelligent agent designed to assist in the development of machine learning applications. It combines project management capabilities with code development assistance, providing a comprehensive solution for ML project development.
 
 ## Architecture
-- **Storage**: In-memory for short-term storage; Vector database for long-term storage and semantic search.
-- **Communication**: Message-based system with different message types (system, user, assistant, tool).
-- **Processing**: Threaded message processing with tool execution and context analysis.
 
-## Components
+### Components
 
-1. **ProjectManager**
-   - Core component managing the entire system
-   - Handles message processing and tool execution
-   - Maintains memory and vector store
+1. **Project Manager Core**
+   - Manages project structure and organization
+   - Handles task scheduling and tracking
+   - Maintains project state and context
 
-2. **Memory**
-   - Short-term memory for recent interactions
-   - Long-term memory for project context
-   - Message history management
+2. **Memory System**
+   - Short-term memory for current context
+   - Long-term memory for project history
+   - Vector database for semantic storage
 
-3. **VectorStore**
-   - Document storage with semantic search capabilities
-   - Embedding-based retrieval system
-   - Context-aware documentation access
+3. **Vector Store**
+   - Stores project documentation
+   - Enables semantic search
+   - Maintains code context
 
-4. **Tool**
-   - Extensible tool system
-   - Built-in code review and debugging tools
-   - Custom tool registration capability
-
-5. **MLProjectAssistant**
-   - High-level interface for ML projects
+4. **Tool System**
+   - Extensible framework for development tasks
+   - Code generation and review
    - Project structure management
-   - Development workflow assistance
+   - Real-time message processing
 
-6. **Frontend Interface**
-   - React-based UI for interacting with the system
-   - Code editor with syntax highlighting
-   - Project visualization and management
+## File Structure
+ai_project_manager/
+├── documentation/          # Project documentation
+│   ├── core_documentation.md
+│   ├── debugging_tools.md
+│   ├── planning.md
+│   ├── project_map.md
+│   └── tasks.md
+├── src/                    # React+TypeScript frontend
+│   ├── App.tsx
+│   ├── index.css
+│   ├── main.tsx
+│   └── vite-env.d.ts
+├── __init__.py            # Package initialization
+├── ai_project_manager.py  # Core Python implementation
+├── index.html            # Frontend entry point
+├── requirements.txt       # Python dependencies
+├── package.json          # Frontend dependencies
+└── config files:
+    ├── tsconfig.json
+    ├── tsconfig.app.json
+    ├── tsconfig.node.json
+    ├── vite.config.ts
+    ├── postcss.config.js
+    └── tailwind.config.js
+
+## Database Structure
+The system uses a vector database for semantic storage with the following collections:
+
+1. **Documentation Collection**
+   - Stores project documentation
+   - Enables semantic search
+   - Maintains version history
+
+2. **Code Context Collection**
+   - Stores code snippets and context
+   - Enables code-aware responses
+   - Maintains relationships between code elements
+
+3. **Project History Collection**
+   - Stores project changes
+   - Maintains task history
+   - Enables context-aware responses
+
+## Style Guidelines
+
+### Code Style
+- Follow PEP8 for Python code
+- Use TypeScript for frontend development
+- Maintain consistent naming conventions
+- Use clear, descriptive variable names
+- Document all public functions and classes
+
+### Documentation
+- Maintain up-to-date README.md
+- Document all API endpoints
+- Include setup instructions
+- Provide usage examples
+
+### Testing
+- Write unit tests for all functions
+- Include integration tests
+- Maintain test coverage above 80%
 
 ## Environment Configuration
-- `VECTOR_DB_PATH`: Path to the vector database storage.
-- `LOG_LEVEL`: Logging level configuration.
-- `MODEL_PATH`: Path to embedding and AI models.
+
+### Development
+- Python 3.9+
+- Node.js 16+
+- Required packages in requirements.txt
+- Frontend dependencies in package.json
+
+### Production
+- Containerized deployment
+- Environment variables for configuration
+- Logging and monitoring setup
+
+## To Be Updated
+- Database structure needs to be updated with current implementation details
+- Additional configuration options need to be documented
+- Deployment instructions need to be finalized
+- Testing strategies need to be documented
+
+Please update these sections as the project evolves.
