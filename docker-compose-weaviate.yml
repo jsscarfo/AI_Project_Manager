@@ -1,0 +1,29 @@
+services:
+  weaviate:
+    image: semitechnologies/weaviate:1.30.1
+    ports:
+     - "8080:8080"
+    restart: on-failure:0
+    environment:
+      QUERY_DEFAULTS_LIMIT: 25
+      AUTHENTICATION_ANONYMOUS_ACCESS_ENABLED: 'true'
+      PERSISTENCE_DATA_PATH: '/var/lib/weaviate'
+      DEFAULT_VECTORIZER_MODULE: 'none'  # We'll provide our own vectors
+      ENABLE_MODULES: ''  # No modules needed for basic usage
+      CLUSTER_HOSTNAME: 'node1'
+    volumes:
+      - weaviate_data:/var/lib/weaviate
+
+  # Optional - Add the transformers module if you want Weaviate to generate embeddings
+  # weaviate-transformers:
+  #   image: semitechnologies/transformers-inference:sentence-transformers-all-MiniLM-L6-v2
+  #   environment:
+  #     ENABLE_CUDA: '0'  # Set to 1 for GPU acceleration
+  #   deploy:
+  #     resources:
+  #       limits:
+  #         memory: 1G
+
+volumes:
+  weaviate_data:
+    # Persistent volume for Weaviate data 

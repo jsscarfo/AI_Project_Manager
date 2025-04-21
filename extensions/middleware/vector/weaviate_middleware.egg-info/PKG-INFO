@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: weaviate-middleware
+Version: 0.1.0
+Requires-Dist: weaviate-client>=3.26.0
+Requires-Dist: numpy>=1.24.0
+Requires-Dist: pytest>=7.3.1
+Requires-Dist: pytest-asyncio>=0.21.0
+Provides-Extra: embeddings
+Requires-Dist: sentence-transformers>=2.2.0; extra == "embeddings"
+Requires-Dist: openai>=1.3.0; extra == "embeddings"
+Requires-Dist: cohere>=4.32; extra == "embeddings"
+Dynamic: provides-extra
+Dynamic: requires-dist

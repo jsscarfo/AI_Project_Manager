@@ -1,0 +1,147 @@
+{
+  "trace_id": "trace_123456",
+  "title": "Sample Reasoning Trace",
+  "steps": {
+    "1": {
+      "step_number": 1,
+      "step_type": "planning",
+      "description": "Step 1: Planning",
+      "timestamp": "2025-04-20T20:32:13.900973",
+      "duration_ms": 100,
+      "word_count": 35,
+      "context_count": 5,
+      "has_substeps": false,
+      "metrics": {
+        "relevance": 0.7,
+        "coherence": 0.8
+      }
+    },
+    "2": {
+      "step_number": 2,
+      "step_type": "research",
+      "description": "Step 2: Research",
+      "timestamp": "2025-04-20T20:32:13.900973",
+      "duration_ms": 150,
+      "word_count": 19,
+      "context_count": 1,
+      "has_substeps": false,
+      "metrics": {
+        "relevance": 0.75,
+        "coherence": 0.78
+      }
+    },
+    "3": {
+      "step_number": 3,
+      "step_type": "analysis",
+      "description": "Step 3: Analysis",
+      "timestamp": "2025-04-20T20:32:13.900973",
+      "duration_ms": 200,
+      "word_count": 35,
+      "context_count": 5,
+      "has_substeps": false,
+      "metrics": {
+        "relevance": 0.7999999999999999,
+        "coherence": 0.76
+      }
+    },
+    "4": {
+      "step_number": 4,
+      "step_type": "synthesis",
+      "description": "Step 4: Synthesis",
+      "timestamp": "2025-04-20T20:32:13.900973",
+      "duration_ms": 250,
+      "word_count": 19,
+      "context_count": 1,
+      "has_substeps": false,
+      "metrics": {
+        "relevance": 0.85,
+        "coherence": 0.74
+      }
+    },
+    "5": {
+      "step_number": 5,
+      "step_type": "conclusion",
+      "description": "Step 5: Conclusion",
+      "timestamp": "2025-04-20T20:32:13.900973",
+      "duration_ms": 300,
+      "word_count": 35,
+      "context_count": 5,
+      "has_substeps": false,
+      "metrics": {
+        "relevance": 0.8999999999999999,
+        "coherence": 0.7200000000000001
+      }
+    }
+  },
+  "flow_chart": {
+    "chart_type": "flow_chart",
+    "step_types": [
+      "analysis",
+      "research",
+      "conclusion",
+      "synthesis",
+      "planning"
+    ],
+    "node_count": 5,
+    "edge_count": 4
+  },
+  "transitions": {
+    "transitions": [
+      {
+        "from_step": 1,
+        "to_step": 2,
+        "from_type": "planning",
+        "to_type": "research",
+        "duration_ms": 0
+      },
+      {
+        "from_step": 2,
+        "to_step": 3,
+        "from_type": "research",
+        "to_type": "analysis",
+        "duration_ms": 0
+      },
+      {
+        "from_step": 3,
+        "to_step": 4,
+        "from_type": "analysis",
+        "to_type": "synthesis",
+        "duration_ms": 0
+      },
+      {
+        "from_step": 4,
+        "to_step": 5,
+        "from_type": "synthesis",
+        "to_type": "conclusion",
+        "duration_ms": 0
+      }
+    ],
+    "step_count": 5,
+    "unique_step_types": [
+      "analysis",
+      "research",
+      "conclusion",
+      "synthesis",
+      "planning"
+    ],
+    "total_transitions": 4
+  },
+  "progress": {
+    "total_steps": 5,
+    "step_type_distribution": {
+      "planning": 1,
+      "research": 1,
+      "analysis": 1,
+      "synthesis": 1,
+      "conclusion": 1
+    },
+    "is_complete": true,
+    "duration_ms": 1000,
+    "last_update": "2025-04-20T20:32:13.900973"
+  },
+  "context_count": 5,
+  "metadata": {
+    "source": "test_generator",
+    "version": "1.0"
+  }
+}

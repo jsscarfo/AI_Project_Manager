@@ -1,0 +1,361 @@
+{
+  "trace_id": "pm_integration_001",
+  "steps": [
+    {
+      "step_id": "step_1",
+      "step_number": 1,
+      "title": "Planning",
+      "content": "In this step, we analyze the requirements for the project management integration.",
+      "step_type": "planning",
+      "timestamp": 1609459200.0,
+      "formatted_time": "2020-12-31 18:00:00",
+      "duration": 2.5,
+      "context_sources": [
+        {
+          "source_id": "source_1",
+          "name": "Requirements Document",
+          "source_type": "document"
+        },
+        {
+          "source_id": "source_2",
+          "name": "Architecture Guide",
+          "source_type": "guide"
+        }
+      ],
+      "context_count": 2,
+      "metrics": {
+        "complexity": 0.3,
+        "importance": 0.8
+      },
+      "position": {
+        "is_first": true,
+        "is_last": false,
+        "position_percent": 25.0
+      },
+      "annotations": [
+        "Initial planning",
+        "Requirements analysis"
+      ],
+      "requires_next_step": true
+    },
+    {
+      "step_id": "step_2",
+      "step_number": 2,
+      "title": "Design",
+      "content": "Based on the requirements, we design the project management data models and operations.",
+      "step_type": "design",
+      "timestamp": 1609459205.0,
+      "formatted_time": "2020-12-31 18:00:05",
+      "duration": 3.5,
+      "context_sources": [
+        {
+          "source_id": "source_1",
+          "name": "Requirements Document",
+          "source_type": "document"
+        },
+        {
+          "source_id": "source_3",
+          "name": "API Documentation",
+          "source_type": "documentation"
+        }
+      ],
+      "context_count": 2,
+      "metrics": {
+        "complexity": 0.6,
+        "quality": 0.75
+      },
+      "position": {
+        "is_first": false,
+        "is_last": false,
+        "position_percent": 50.0
+      },
+      "annotations": [
+        "Architecture design",
+        "Data model creation"
+      ],
+      "requires_next_step": true
+    },
+    {
+      "step_id": "step_3",
+      "step_number": 3,
+      "title": "Implementation",
+      "content": "Now we implement the project management integration system with all required components.",
+      "step_type": "implementation",
+      "timestamp": 1609459210.0,
+      "formatted_time": "2020-12-31 18:00:10",
+      "duration": 5.0,
+      "context_sources": [
+        {
+          "source_id": "source_2",
+          "name": "Architecture Guide",
+          "source_type": "guide"
+        },
+        {
+          "source_id": "source_3",
+          "name": "API Documentation",
+          "source_type": "documentation"
+        }
+      ],
+      "context_count": 2,
+      "metrics": {
+        "complexity": 0.8,
+        "completeness": 0.7
+      },
+      "position": {
+        "is_first": false,
+        "is_last": false,
+        "position_percent": 75.0
+      },
+      "annotations": [
+        "Core implementation",
+        "Integration points"
+      ],
+      "requires_next_step": true
+    },
+    {
+      "step_id": "step_4",
+      "step_number": 4,
+      "title": "Testing",
+      "content": "Finally, we test the project management integration to ensure it meets all requirements.",
+      "step_type": "testing",
+      "timestamp": 1609459220.0,
+      "formatted_time": "2020-12-31 18:00:20",
+      "duration": 4.0,
+      "context_sources": [
+        {
+          "source_id": "source_1",
+          "name": "Requirements Document",
+          "source_type": "document"
+        },
+        {
+          "source_id": "source_4",
+          "name": "Test Plan",
+          "source_type": "document"
+        }
+      ],
+      "context_count": 2,
+      "metrics": {
+        "coverage": 0.9,
+        "quality": 0.85
+      },
+      "position": {
+        "is_first": false,
+        "is_last": true,
+        "position_percent": 100.0
+      },
+      "annotations": [
+        "Test execution",
+        "Validation of requirements"
+      ],
+      "requires_next_step": false
+    }
+  ],
+  "transitions": {
+    "trace_id": "pm_integration_001",
+    "total_transitions": 3,
+    "transitions": [
+      {
+        "from_step": 1,
+        "to_step": 2,
+        "from_type": "planning",
+        "to_type": "design",
+        "duration": 5.0,
+        "type_change": true,
+        "annotation": "Transition from planning to design"
+      },
+      {
+        "from_step": 2,
+        "to_step": 3,
+        "from_type": "design",
+        "to_type": "implementation",
+        "duration": 5.0,
+        "type_change": true,
+        "annotation": "Transition from design to implementation"
+      },
+      {
+        "from_step": 3,
+        "to_step": 4,
+        "from_type": "implementation",
+        "to_type": "testing",
+        "duration": 10.0,
+        "type_change": true,
+        "annotation": "Transition from implementation to testing"
+      }
+    ],
+    "type_changes": 3
+  },
+  "flow_chart": {
+    "nodes": [
+      {
+        "id": "step_1",
+        "label": "Step 1",
+        "type": "planning",
+        "data": {
+          "step_number": 1,
+          "content_preview": "In this step, we analyze the requirements for the project management integration.",
+          "requires_next_step": true
+        }
+      },
+      {
+        "id": "step_2",
+        "label": "Step 2",
+        "type": "design",
+        "data": {
+          "step_number": 2,
+          "content_preview": "Based on the requirements, we design the project management data models and operations.",
+          "requires_next_step": true
+        }
+      },
+      {
+        "id": "step_3",
+        "label": "Step 3",
+        "type": "implementation",
+        "data": {
+          "step_number": 3,
+          "content_preview": "Now we implement the project management integration system with all required components.",
+          "requires_next_step": true
+        }
+      },
+      {
+        "id": "step_4",
+        "label": "Step 4",
+        "type": "testing",
+        "data": {
+          "step_number": 4,
+          "content_preview": "Finally, we test the project management integration to ensure it meets all requirements.",
+          "requires_next_step": false
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "edge_1_2",
+        "source": "step_1",
+        "target": "step_2",
+        "type": "transition",
+        "data": {
+          "duration": 5.0,
+          "type_change": true
+        }
+      },
+      {
+        "id": "edge_2_3",
+        "source": "step_2",
+        "target": "step_3",
+        "type": "transition",
+        "data": {
+          "duration": 5.0,
+          "type_change": true
+        }
+      },
+      {
+        "id": "edge_3_4",
+        "source": "step_3",
+        "target": "step_4",
+        "type": "transition",
+        "data": {
+          "duration": 10.0,
+          "type_change": true
+        }
+      }
+    ],
+    "trace_id": "pm_integration_001",
+    "step_types": [
+      "testing",
+      "planning",
+      "design",
+      "implementation"
+    ]
+  },
+  "progress": {
+    "trace_id": "pm_integration_001",
+    "is_complete": true,
+    "steps_completed": 4,
+    "current_step": 4,
+    "current_step_type": "testing",
+    "steps_by_type": {
+      "planning": [
+        1
+      ],
+      "design": [
+        2
+      ],
+      "implementation": [
+        3
+      ],
+      "testing": [
+        4
+      ]
+    },
+    "timeline": [
+      {
+        "step_number": 1,
+        "timestamp": 1609459200.0,
+        "step_type": "planning",
+        "content_preview": "In this step, we analyze the requirements for the project management integration."
+      },
+      {
+        "step_number": 2,
+        "timestamp": 1609459205.0,
+        "step_type": "design",
+        "content_preview": "Based on the requirements, we design the project management data models and operations."
+      },
+      {
+        "step_number": 3,
+        "timestamp": 1609459210.0,
+        "step_type": "implementation",
+        "content_preview": "Now we implement the project management integration system with all required components."
+      },
+      {
+        "step_number": 4,
+        "timestamp": 1609459220.0,
+        "step_type": "testing",
+        "content_preview": "Finally, we test the project management integration to ensure it meets all requirements."
+      }
+    ],
+    "total_reasoning_time": 15.0
+  },
+  "type_distribution": {
+    "trace_id": "pm_integration_001",
+    "step_types": [
+      "planning",
+      "design",
+      "implementation",
+      "testing"
+    ],
+    "counts": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "durations": [
+      2.5,
+      3.5,
+      5.0,
+      4.0
+    ],
+    "chart_data": [
+      {
+        "type": "planning",
+        "count": 1,
+        "total_duration": 2.5
+      },
+      {
+        "type": "design",
+        "count": 1,
+        "total_duration": 3.5
+      },
+      {
+        "type": "implementation",
+        "count": 1,
+        "total_duration": 5.0
+      },
+      {
+        "type": "testing",
+        "count": 1,
+        "total_duration": 4.0
+      }
+    ]
+  }
+}

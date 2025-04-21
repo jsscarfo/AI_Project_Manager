@@ -1,0 +1,8 @@
+README.md
+setup.py
+tests/test_weaviate_provider.py
+weaviate_middleware.egg-info/PKG-INFO
+weaviate_middleware.egg-info/SOURCES.txt
+weaviate_middleware.egg-info/dependency_links.txt
+weaviate_middleware.egg-info/requires.txt
+weaviate_middleware.egg-info/top_level.txt

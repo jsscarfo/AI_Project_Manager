@@ -1,0 +1,616 @@
+{
+  "trace_id": "trace_123456",
+  "context_heatmap": {
+    "heatmap_data": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    ],
+    "step_labels": [
+      "Step 1: planning",
+      "Step 2: research",
+      "Step 3: analysis",
+      "Step 4: synthesis",
+      "Step 5: conclusion"
+    ],
+    "context_labels": [
+      "document: ctx_0",
+      "knowledge_base: ctx_1",
+      "user_input: ctx_2",
+      "document: ctx_3",
+      "knowledge_base: ctx_4"
+    ],
+    "max_value": 1,
+    "min_value": 0
+  },
+  "usage_analytics": {
+    "usage_by_step_type": {
+      "planning": {
+        "count": 1,
+        "contexts": [
+          "ctx_1",
+          "ctx_4",
+          "ctx_0",
+          "ctx_2",
+          "ctx_3"
+        ],
+        "context_count": 5
+      },
+      "research": {
+        "count": 1,
+        "contexts": [
+          "ctx_2"
+        ],
+        "context_count": 1
+      },
+      "analysis": {
+        "count": 1,
+        "contexts": [
+          "ctx_1",
+          "ctx_4",
+          "ctx_0",
+          "ctx_2",
+          "ctx_3"
+        ],
+        "context_count": 5
+      },
+      "synthesis": {
+        "count": 1,
+        "contexts": [
+          "ctx_2"
+        ],
+        "context_count": 1
+      },
+      "conclusion": {
+        "count": 1,
+        "contexts": [
+          "ctx_1",
+          "ctx_4",
+          "ctx_0",
+          "ctx_2",
+          "ctx_3"
+        ],
+        "context_count": 5
+      }
+    },
+    "usage_timeline": [
+      {
+        "step_number": 1,
+        "step_type": "planning",
+        "context_count": 5,
+        "contexts": [
+          "ctx_1",
+          "ctx_4",
+          "ctx_0",
+          "ctx_2",
+          "ctx_3"
+        ],
+        "context_change": {}
+      },
+      {
+        "step_number": 2,
+        "step_type": "research",
+        "context_count": 1,
+        "contexts": [
+          "ctx_2"
+        ],
+        "context_change": {
+          "added": [],
+          "removed": [
+            "ctx_1",
+            "ctx_4",
+            "ctx_0",
+            "ctx_3"
+          ],
+          "retained": [
+            "ctx_2"
+          ]
+        }
+      },
+      {
+        "step_number": 3,
+        "step_type": "analysis",
+        "context_count": 5,
+        "contexts": [
+          "ctx_1",
+          "ctx_4",
+          "ctx_0",
+          "ctx_2",
+          "ctx_3"
+        ],
+        "context_change": {
+          "added": [
+            "ctx_1",
+            "ctx_4",
+            "ctx_0",
+            "ctx_3"
+          ],
+          "removed": [],
+          "retained": [
+            "ctx_2"
+          ]
+        }
+      },
+      {
+        "step_number": 4,
+        "step_type": "synthesis",
+        "context_count": 1,
+        "contexts": [
+          "ctx_2"
+        ],
+        "context_change": {
+          "added": [],
+          "removed": [
+            "ctx_1",
+            "ctx_4",
+            "ctx_0",
+            "ctx_3"
+          ],
+          "retained": [
+            "ctx_2"
+          ]
+        }
+      },
+      {
+        "step_number": 5,
+        "step_type": "conclusion",
+        "context_count": 5,
+        "contexts": [
+          "ctx_1",
+          "ctx_4",
+          "ctx_0",
+          "ctx_2",
+          "ctx_3"
+        ],
+        "context_change": {
+          "added": [
+            "ctx_1",
+            "ctx_4",
+            "ctx_0",
+            "ctx_3"
+          ],
+          "removed": [],
+          "retained": [
+            "ctx_2"
+          ]
+        }
+      }
+    ],
+    "total_steps": 5,
+    "total_contexts": 5
+  },
+  "usage_summary": {
+    "context_count": 5,
+    "step_count": 5,
+    "context_usage": {
+      "ctx_0": {
+        "context_id": "ctx_0",
+        "source_type": "document",
+        "steps_using": 3,
+        "usage_percentage": 60.0,
+        "importance": 0.7
+      },
+      "ctx_1": {
+        "context_id": "ctx_1",
+        "source_type": "knowledge_base",
+        "steps_using": 3,
+        "usage_percentage": 60.0,
+        "importance": 0.7999999999999999
+      },
+      "ctx_2": {
+        "context_id": "ctx_2",
+        "source_type": "user_input",
+        "steps_using": 5,
+        "usage_percentage": 100.0,
+        "importance": 0.8999999999999999
+      },
+      "ctx_3": {
+        "context_id": "ctx_3",
+        "source_type": "document",
+        "steps_using": 3,
+        "usage_percentage": 60.0,
+        "importance": 0.7
+      },
+      "ctx_4": {
+        "context_id": "ctx_4",
+        "source_type": "knowledge_base",
+        "steps_using": 3,
+        "usage_percentage": 60.0,
+        "importance": 0.8
+      }
+    },
+    "most_used": {
+      "context_id": "ctx_2",
+      "source_type": "user_input",
+      "steps_using": 5,
+      "usage_percentage": 100.0,
+      "importance": 0.8999999999999999
+    },
+    "least_used": {
+      "context_id": "ctx_0",
+      "source_type": "document",
+      "steps_using": 3,
+      "usage_percentage": 60.0,
+      "importance": 0.7
+    }
+  },
+  "source_attributions": {
+    "1": {
+      "step_number": 1,
+      "step_type": "planning",
+      "attribution_count": 5,
+      "attributions": [
+        {
+          "context_id": "ctx_2",
+          "source_type": "user_input",
+          "source": "source_2",
+          "importance": 0.8999999999999999
+        },
+        {
+          "context_id": "ctx_4",
+          "source_type": "knowledge_base",
+          "source": "source_4",
+          "importance": 0.8
+        },
+        {
+          "context_id": "ctx_1",
+          "source_type": "knowledge_base",
+          "source": "source_1",
+          "importance": 0.7999999999999999
+        },
+        {
+          "context_id": "ctx_0",
+          "source_type": "document",
+          "source": "source_0",
+          "importance": 0.7
+        },
+        {
+          "context_id": "ctx_3",
+          "source_type": "document",
+          "source": "source_3",
+          "importance": 0.7
+        }
+      ],
+      "primary_sources": [
+        "source_2",
+        "source_4",
+        "source_1"
+      ]
+    },
+    "2": {
+      "step_number": 2,
+      "step_type": "research",
+      "attribution_count": 1,
+      "attributions": [
+        {
+          "context_id": "ctx_2",
+          "source_type": "user_input",
+          "source": "source_2",
+          "importance": 0.8999999999999999
+        }
+      ],
+      "primary_sources": [
+        "source_2"
+      ]
+    },
+    "3": {
+      "step_number": 3,
+      "step_type": "analysis",
+      "attribution_count": 5,
+      "attributions": [
+        {
+          "context_id": "ctx_2",
+          "source_type": "user_input",
+          "source": "source_2",
+          "importance": 0.8999999999999999
+        },
+        {
+          "context_id": "ctx_4",
+          "source_type": "knowledge_base",
+          "source": "source_4",
+          "importance": 0.8
+        },
+        {
+          "context_id": "ctx_1",
+          "source_type": "knowledge_base",
+          "source": "source_1",
+          "importance": 0.7999999999999999
+        },
+        {
+          "context_id": "ctx_0",
+          "source_type": "document",
+          "source": "source_0",
+          "importance": 0.7
+        },
+        {
+          "context_id": "ctx_3",
+          "source_type": "document",
+          "source": "source_3",
+          "importance": 0.7
+        }
+      ],
+      "primary_sources": [
+        "source_2",
+        "source_4",
+        "source_1"
+      ]
+    },
+    "4": {
+      "step_number": 4,
+      "step_type": "synthesis",
+      "attribution_count": 1,
+      "attributions": [
+        {
+          "context_id": "ctx_2",
+          "source_type": "user_input",
+          "source": "source_2",
+          "importance": 0.8999999999999999
+        }
+      ],
+      "primary_sources": [
+        "source_2"
+      ]
+    },
+    "5": {
+      "step_number": 5,
+      "step_type": "conclusion",
+      "attribution_count": 5,
+      "attributions": [
+        {
+          "context_id": "ctx_2",
+          "source_type": "user_input",
+          "source": "source_2",
+          "importance": 0.8999999999999999
+        },
+        {
+          "context_id": "ctx_4",
+          "source_type": "knowledge_base",
+          "source": "source_4",
+          "importance": 0.8
+        },
+        {
+          "context_id": "ctx_1",
+          "source_type": "knowledge_base",
+          "source": "source_1",
+          "importance": 0.7999999999999999
+        },
+        {
+          "context_id": "ctx_0",
+          "source_type": "document",
+          "source": "source_0",
+          "importance": 0.7
+        },
+        {
+          "context_id": "ctx_3",
+          "source_type": "document",
+          "source": "source_3",
+          "importance": 0.7
+        }
+      ],
+      "primary_sources": [
+        "source_2",
+        "source_4",
+        "source_1"
+      ]
+    }
+  },
+  "highlights_example": {
+    "text": "This is the content for step 5. It performs conclusion with the available information. Using context: This is sa and This is sa and This is sa and This is sa and This is sa",
+    "highlight_count": 25,
+    "highlights": [
+      {
+        "start_idx": 102,
+        "end_idx": 112,
+        "context_id": "ctx_0",
+        "source_type": "document",
+        "importance": 0.7
+      },
+      {
+        "start_idx": 117,
+        "end_idx": 127,
+        "context_id": "ctx_0",
+        "source_type": "document",
+        "importance": 0.7
+      },
+      {
+        "start_idx": 132,
+        "end_idx": 142,
+        "context_id": "ctx_0",
+        "source_type": "document",
+        "importance": 0.7
+      },
+      {
+        "start_idx": 147,
+        "end_idx": 157,
+        "context_id": "ctx_0",
+        "source_type": "document",
+        "importance": 0.7
+      },
+      {
+        "start_idx": 162,
+        "end_idx": 172,
+        "context_id": "ctx_0",
+        "source_type": "document",
+        "importance": 0.7
+      },
+      {
+        "start_idx": 102,
+        "end_idx": 112,
+        "context_id": "ctx_1",
+        "source_type": "knowledge_base",
+        "importance": 0.7999999999999999
+      },
+      {
+        "start_idx": 117,
+        "end_idx": 127,
+        "context_id": "ctx_1",
+        "source_type": "knowledge_base",
+        "importance": 0.7999999999999999
+      },
+      {
+        "start_idx": 132,
+        "end_idx": 142,
+        "context_id": "ctx_1",
+        "source_type": "knowledge_base",
+        "importance": 0.7999999999999999
+      },
+      {
+        "start_idx": 147,
+        "end_idx": 157,
+        "context_id": "ctx_1",
+        "source_type": "knowledge_base",
+        "importance": 0.7999999999999999
+      },
+      {
+        "start_idx": 162,
+        "end_idx": 172,
+        "context_id": "ctx_1",
+        "source_type": "knowledge_base",
+        "importance": 0.7999999999999999
+      },
+      {
+        "start_idx": 102,
+        "end_idx": 112,
+        "context_id": "ctx_2",
+        "source_type": "user_input",
+        "importance": 0.8999999999999999
+      },
+      {
+        "start_idx": 117,
+        "end_idx": 127,
+        "context_id": "ctx_2",
+        "source_type": "user_input",
+        "importance": 0.8999999999999999
+      },
+      {
+        "start_idx": 132,
+        "end_idx": 142,
+        "context_id": "ctx_2",
+        "source_type": "user_input",
+        "importance": 0.8999999999999999
+      },
+      {
+        "start_idx": 147,
+        "end_idx": 157,
+        "context_id": "ctx_2",
+        "source_type": "user_input",
+        "importance": 0.8999999999999999
+      },
+      {
+        "start_idx": 162,
+        "end_idx": 172,
+        "context_id": "ctx_2",
+        "source_type": "user_input",
+        "importance": 0.8999999999999999
+      },
+      {
+        "start_idx": 102,
+        "end_idx": 112,
+        "context_id": "ctx_3",
+        "source_type": "document",
+        "importance": 0.7
+      },
+      {
+        "start_idx": 117,
+        "end_idx": 127,
+        "context_id": "ctx_3",
+        "source_type": "document",
+        "importance": 0.7
+      },
+      {
+        "start_idx": 132,
+        "end_idx": 142,
+        "context_id": "ctx_3",
+        "source_type": "document",
+        "importance": 0.7
+      },
+      {
+        "start_idx": 147,
+        "end_idx": 157,
+        "context_id": "ctx_3",
+        "source_type": "document",
+        "importance": 0.7
+      },
+      {
+        "start_idx": 162,
+        "end_idx": 172,
+        "context_id": "ctx_3",
+        "source_type": "document",
+        "importance": 0.7
+      },
+      {
+        "start_idx": 102,
+        "end_idx": 112,
+        "context_id": "ctx_4",
+        "source_type": "knowledge_base",
+        "importance": 0.8
+      },
+      {
+        "start_idx": 117,
+        "end_idx": 127,
+        "context_id": "ctx_4",
+        "source_type": "knowledge_base",
+        "importance": 0.8
+      },
+      {
+        "start_idx": 132,
+        "end_idx": 142,
+        "context_id": "ctx_4",
+        "source_type": "knowledge_base",
+        "importance": 0.8
+      },
+      {
+        "start_idx": 147,
+        "end_idx": 157,
+        "context_id": "ctx_4",
+        "source_type": "knowledge_base",
+        "importance": 0.8
+      },
+      {
+        "start_idx": 162,
+        "end_idx": 172,
+        "context_id": "ctx_4",
+        "source_type": "knowledge_base",
+        "importance": 0.8
+      }
+    ],
+    "source_types": [
+      "knowledge_base",
+      "user_input",
+      "document"
+    ]
+  },
+  "context_count": 5
+}

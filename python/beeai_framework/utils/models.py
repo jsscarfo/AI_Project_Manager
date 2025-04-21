@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # Copyright 2025 © BeeAI a Series of LF Projects, LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -12,11 +13,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+"""
+Utility functions for working with data models.
+"""
+
+import inspect
 from abc import ABC
 from collections.abc import Sequence
 from contextlib import suppress
 from logging import Logger
-from typing import Any, Literal, Optional, TypeVar, Union
+from typing import Any, Dict, Literal, Optional, Type, TypeVar, Union, get_type_hints
 
 from pydantic import BaseModel, ConfigDict, Field, GetJsonSchemaHandler, create_model
 from pydantic.json_schema import JsonSchemaValue
@@ -119,3 +125,52 @@ class JSONSchemaModel(ABC, BaseModel):
         )
         model._custom_json_schema = schema
         return model
+
+
+def get_schema(model_type: Type[T]) -> Dict[str, Any]:
+    """
+    Get the JSON schema for a Pydantic model.
+    
+    Args:
+        model_type: The Pydantic model class
+        
+    Returns:
+        The JSON schema as a dictionary
+    """
+    if hasattr(model_type, "model_json_schema"):
+        # Pydantic v2
+        return model_type.model_json_schema()
+    elif hasattr(model_type, "schema"):
+        # Pydantic v1
+        return model_type.schema()
+    else:
+        # Fallback for non-Pydantic types
+        schema = {
+            "type": "object",
+            "properties": {}
+        }
+        
+        if inspect.isclass(model_type):
+            # Try to get type hints
+            hints = get_type_hints(model_type)
+            for name, hint in hints.items():
+                if name.startswith('_'):
+                    continue
+                    
+                # Basic type mapping
+                if hint == str:
+                    schema["properties"][name] = {"type": "string"}
+                elif hint == int:
+                    schema["properties"][name] = {"type": "integer"}
+                elif hint == float:
+                    schema["properties"][name] = {"type": "number"}
+                elif hint == bool:
+                    schema["properties"][name] = {"type": "boolean"}
+                elif hint == list or hint == set:
+                    schema["properties"][name] = {"type": "array", "items": {}}
+                elif hint == dict:
+                    schema["properties"][name] = {"type": "object"}
+                else:
+                    schema["properties"][name] = {"type": "object"}
+        
+        return schema
