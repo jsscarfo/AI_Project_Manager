@@ -24,7 +24,7 @@ echo Configuring API keys...
 echo Setting up Grok API...
 beeai env add LLM_MODEL=grok-1
 beeai env add LLM_API_BASE=https://api.x.ai/v1
-beeai env add LLM_API_KEY=xai-oovnDvFZmpZMVaGgJj3ZB4YaVXuNyr6DdwFtUF0rsPOWQ5mMoGiRXcOp5MX9G7C3U0Nr4pvAZmiAO8rW
+beeai env add LLM_API_KEY=
 echo Grok API configuration complete!
 echo.
 
@@ -32,7 +32,7 @@ echo.
 echo Setting up OpenRouter API...
 beeai env add LLM_MODEL=google/gemini-2.0-pro-exp-02-05:free
 beeai env add LLM_API_BASE=https://openrouter.ai/api/v1
-beeai env add LLM_API_KEY=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
+beeai env add LLM_API_KEY=
 echo OpenRouter API configuration complete!
 echo.
 
